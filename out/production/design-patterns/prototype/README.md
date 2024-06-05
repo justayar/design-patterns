@@ -11,10 +11,11 @@ When you need an object like the one you’ve configured, you just clone a proto
 
 ## Pros
 
-- You avoid tight coupling between the creator and the concrete products.
-- **Single Responsibility Principle** You can move the product creation code into one place in the program, making the code easier to support.
-- **Open/Closed Principle** You can introduce new types of products into the program without breaking existing client code.
+- You can clone objects without coupling to their concrete classes.
+- You can get rid of repeated initialization code in favor of cloning pre-built prototypes.
+- You can produce complex objects more conveniently.
+- You get an alternative to inheritance when dealing with configuration presets for complex objects.
 
 ## Cons
 
-- The code will be complex to create many subclasses
+- Cloning complex objects that have circular references might be very tricky.
